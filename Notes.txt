@@ -1,0 +1,5 @@
+ESC + i para escribir en VIM
+ESC SHIFT Z Z guarda mensaje y fuerza el commit 
+
+git diff is used to compare the changes between two commits
+
