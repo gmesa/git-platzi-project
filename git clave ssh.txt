@@ -1,0 +1,61 @@
+git config --global user.email "gmesac87@gmail.com"
+
+ssh-keygen -t rsa -b 4096 -C "gmesac87@gmail.com"
+
+
+la clave se guarda en la carpeta .ssh en el usuario que esta logueado.
+
+luego es agregar la llave al entorno
+
+primero ver si el servidor de llaves esta corriendo
+
+eval $(ssh-agent -s)
+
+luego agregarla al servidor ...tienes que saber donde la creaste..usas el simbolo de la n para acortar la ruta.
+La llave que se agrega es la privada Ojoooooooooo
+
+ssh-add ~/.ssh/id_rsa
+
+https://platzi.com/clases/1557-git-github/19950-configurar-llaves-ssh-en-github/
+
+
+abrimos la llave publica con un editor de codigo
+
+vamos a github--setting -ssh and gpg.
+
+add new ssh-key 
+en el titulo poner mi laptop..copiar la llave publica en el esapcio.
+
+
+copio en github la url con la clave ssh en el repo. voy a mi repositorio local 
+git remote
+git remote -v
+git remote set-url origin urldelssh
+
+
+
+
+
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/guille/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/guille/.ssh/id_rsa
+Your public key has been saved in /c/Users/guille/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:BCalzbqo5n/u7hvFw/AK9GgV0VGzjrYhoXaCGZ2dvhc gmesac87@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|    .+*.oo       |
+|  . o*oo  o      |
+| . +.*o ..       |
+|  = *.*.o        |
+| o B.= ES.       |
+|  o.+.* =        |
+|  . .+ o         |
+| o   .o          |
+|+...**.          |
++----[SHA256]-----+
+
+
+
